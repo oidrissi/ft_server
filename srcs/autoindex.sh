@@ -1,3 +1,5 @@
+# Checks if Nginx is running, reloads it if it's the case and sets autoindex to off
+
 if (( $(ps -ef | grep -v grep | grep nginx | wc -l) > 0 ))
 then
     if [ "$AUTOINDEX" = "off" ] ;
